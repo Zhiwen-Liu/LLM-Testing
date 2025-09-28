@@ -27,7 +27,7 @@ AISBench Benchmark 是基于 [OpenCompass](https://github.com/open-compass/openc
 conda create --name ais_bench python=3.10 -y
 conda activate ais_bench
 ```
-**若采用昇腾设备，无Conda环境情况下，也可直接基于昇腾MindIE镜像的基础Python环境进行安装。**
+**若采用昇腾设备，无Conda环境情况下，也可直接使用昇腾MindIE镜像创建容器，使用容器内的基础Python环境进行安装。**
 
 ### 📦 安装方式（源码安装）
 
