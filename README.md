@@ -26,11 +26,13 @@ MindIE推理引擎启动的大模型服务支持vllm兼容OpenAI接口，因此�
 - 注意：性能测评所占用的缓存大小与请求的上下文长度以及请求的数量成正比，因此通常与测评时长呈正相关增长。
 
 **3.1.1 运行命令前置准备**
+
 - 使用MindIE推理引擎部署大模型服务；
 - 准备性能测评数据集，以gsm8k数据集为例，可以下载 [opencompass
 提供的gsm8k数据集压缩包](http://opencompass.oss-cn-shanghai.aliyuncs.com/datasets/data/gsm8k.zip)。将解压后的`gsm8k/`文件夹部署到AISBench评测工具根路径下的`ais_bench/datasets`文件夹下。
 
 **3.1.2 修改配置文件**
+
 每个模型测评任务、数据集任务和结果呈现任务都对应一个配置文件，运行命令前需要修改这些配置文件的内容。这些配置文件路径可以通过在原有AISBench命令基础上加上`--search`来查询，例如：
 ```shell
 # 注意search的命令中是否加 "--mode perf" 不影响搜索结果
@@ -82,6 +84,7 @@ models = [
 此项目测评示例的数据集任务配置文件`demo_gsm8k_gen_4_shot_cot_chat_prompt.py`已默认配置好，不需要做额外修改。
 
 **3.1.3 执行服务化性能测评命令**
+
 修改好配置文件后，执行命令启动服务化性能评测（⚠️ 第一次执行建议加上`--debug`，可以将具体日志打屏，如果有请求推理服务过程中的报错更方便处理）：
 ```bash
 # 命令行加上--debug
@@ -97,6 +100,7 @@ ais_bench --models vllm_api_stream_chat --datasets demo_gsm8k_gen_4_shot_cot_cha
 - `--summarizer`指定了结果呈现任务，即`default_perf`结果呈现任务(不指定`--summarizer`精度评测场景默认使用`default_perf`任务)，一般使用默认，不需要在命令行中指定，后续命令不指定。
 
 **3.1.4 查看性能结果**
+
 性能结果打屏示例如下：
 ```bash
 06/05 20:22:24 - AISBench - INFO - Performance Results of task: vllm-api-stream-chat/gsm8kdataset:
@@ -185,11 +189,13 @@ MindIE推理引擎启动的大模型服务支持vllm兼容OpenAI接口，因此�
 - 要求：模型推理服务已使用MindIE部署，需测试其实际服务能力;
   
 **3.2.1 运行命令前置准备**
+
 - 使用MindIE推理引擎部署大模型服务；
 - 准备精度测评数据集，以gsm8k数据集为例，可以下载 [opencompass
 提供的gsm8k数据集压缩包](http://opencompass.oss-cn-shanghai.aliyuncs.com/datasets/data/gsm8k.zip)。将解压后的`gsm8k/`文件夹部署到AISBench评测工具根路径下的`ais_bench/datasets`文件夹下。
 
 **3.2.2 修改配置文件**
+
 每个模型测评任务、数据集任务和结果呈现任务都对应一个配置文件，运行命令前需要修改这些配置文件的内容。这些配置文件路径可以通过在原有AISBench命令基础上加上`--search`来查询，例如：
 ```shell
 # 注意search的命令中是否加 "--mode all" 不影响搜索结果
