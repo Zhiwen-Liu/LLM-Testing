@@ -246,6 +246,7 @@ models = [
 此项目测评示例的数据集任务配置文件`demo_gsm8k_gen_4_shot_cot_chat_prompt.py`已默认配置好，不需要做额外修改。
 
 **3.2.3 执行服务化精度测评命令**
+
 修改好配置文件后，执行命令启动服务化精度评测（⚠️ 第一次执行建议加上`--debug`，可以将具体日志打屏，如果有请求推理服务过程中的报错更方便处理）：
 ```bash
 # 命令行加上--debug
@@ -261,6 +262,7 @@ ais_bench --models vllm_api_stream_chat --datasets demo_gsm8k_gen_4_shot_cot_cha
 - `--summarizer`指定了结果呈现任务，即`default_perf`结果呈现任务(不指定`--summarizer`精度评测场景默认使用`default_perf`任务)，一般使用默认，不需要在命令行中指定，后续命令不指定。
 
 **3.2.4 查看精度结果**
+
 因为只有8条数据，会很快跑出结果，结果显示的示例如下：
 ```bash
 dataset                 version  metric   mode  vllm_api_general_chat
