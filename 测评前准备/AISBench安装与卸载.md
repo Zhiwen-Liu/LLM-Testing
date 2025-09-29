@@ -1,10 +1,4 @@
-<div align="center">
-
-  # **AISBench 工具**
-  #### 面向人工智能领域的测试基准工具
-  <!-- 用分隔线替代背景 -->
-  ---
-</div>
+# **AISBench 安装与卸载**
 
 ## 🌏 简介
 AISBench Benchmark 是基于 [OpenCompass](https://github.com/open-compass/opencompass) 构建的模型评测工具，兼容 OpenCompass 的配置体系、数据集结构与模型后端实现，并在此基础上扩展了对服务化模型的支持能力。
