@@ -23,6 +23,8 @@ conda activate ais_bench
 ```
 **若采用昇腾设备，无Conda环境情况下，也可直接使用昇腾MindIE镜像创建容器，使用容器内的基础Python环境进行安装。**
 
+**❗注意：MindIE官方镜像自2.1.RC1版本之后预制AISbench工具，镜像内默认安装路径为/usr/local/lib/python3.11/site-packages/ais_bench**
+
 ### 📦 安装方式（源码安装）
 
 AISBench 当前仅提供源码安装方式，请确保安装环境联网：
