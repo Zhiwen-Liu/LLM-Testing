@@ -22,6 +22,12 @@ conda create --name ais_bench python=3.10 -y
 conda activate ais_bench
 ```
 **若采用昇腾设备，无Conda环境情况下，也可直接使用昇腾MindIE镜像创建容器，使用容器内的基础Python环境进行安装。**
+```bash
+# 进入MindIE镜像后，使用find命令查找aisbench安装目录
+find / -name ais_bench -type d
+# 确认安装目录后cd进入目录
+cd /usr/local/lib/python3.11/site-packages/ais_bench
+```
 
 ### 📦 安装方式（源码安装）
 
