@@ -29,6 +29,8 @@ find / -name ais_bench -type d
 cd /usr/local/lib/python3.11/site-packages/ais_bench
 ```
 
+**❗注意：MindIE官方镜像自2.1.RC1版本之后预制AISbench工具，镜像内默认安装路径为/usr/local/lib/python3.11/site-packages/ais_bench**
+
 ### 📦 安装方式（源码安装）
 
 AISBench 当前仅提供源码安装方式，请确保安装环境联网：
